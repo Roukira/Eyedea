@@ -18,6 +18,7 @@
   padding: 0px;
   background-color: #121212;
   border-bottom: 10px black solid;
+  overflow: hidden;
 }
 
 #containerFixedHeader
