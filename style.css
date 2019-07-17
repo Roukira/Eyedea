@@ -1,8 +1,8 @@
 *
 {
   /*Dark theme*/
-  background-color: #121212;
-  color : white;
+  /*background-color: #121212;
+  color : white;*/
   /*Light Theme*/
   background-color: white;
   color: black;
@@ -16,7 +16,7 @@
   top: 0px;
   margin: 0px;
   padding: 0px;
-  background-color: white;
+  background-color: #121212;
   border-bottom: 10px black solid;
 }
 
