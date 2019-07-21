@@ -9,34 +9,26 @@
 	</head>
 	
 	<body>
-	
 		<header id="FixedHeader"> <!-- Main header that remains on top -->
 			<div id="containerFixedHeader">
 				<div id="containerLeftFixedHeader">
-					<a href="index.html"><img src="EyedeaSecondLogo.png" width="85" height="100" title="Logo" alt="logo" id="mainLogo"></a>
-					<input type="image" src="plusIcon.png" width="90" height="90" name="postIdeaButton" id="postIdeaButton" />
+					<a href="index.html"><img src="EyedeaSecondLogo.png" title="Logo" alt="logo" id="mainLogo"></a>
+					<input type="image" src="plusIcon.png" name="postIdeaButton" id="postIdeaButton" />
 					<label for="postIdeaButton" id="postIdeaLabel">Post your idea...</label><br />
 				</div>
 				<div id="containerRightFixedHeader">
 					<input type="text" placeholder="Search..." id="searchBar" /><br />
-					<input type="image" src="defaultNotification.png" width="90" height="90" name="notificationButton" id="notificationButton" /><br />
-					<input type="image" src="defaultUser.png" width="90" height="90" name="accountButton" id="accountButton" /><br />
+					<input type="image" src="defaultNotification.png" name="notificationButton" id="notificationButton" /><br />
+					<input type="image" src="defaultUser.png" name="accountButton" id="accountButton" /><br />
 				</div>
 			</div>
 		</header>
 		
 		<section> <!-- Main content -->
 			<header> <!-- Header non-static -->
-				<div id="containerSectionHeader"> <!-- do checkboxes with option here -->
-					<input type="radio" name="sorting" value="topIdeasButton" id="topIdeasButton" /><label for="topIdeasButton" id="topIdeasLabel" >Top Ideas</label><br />
-					<input type="radio" name="sorting" value="latestButton" id="latestButton" /><label for="latestButton" id="latestLabel" >Latest</label><br />
-					<input type="radio" name="sorting" value="itsHapenningButton" id="itsHapenningButton" /><label for="itsHappeningButton" id="itsHapenningLabel" >It's happening !</label><br />
-					
-					<input type="radio" value="dailyButton" name="dateSorting" id="dailyButton" /><label for="dailyButton" id="dailyLabel" >Daily</label><br />
-					<input type="radio" value="weeklyButton" name="dateSorting" id="weeklyButton" /><label for="weeklyButton" id="weeklyLabel" >Weekly</label><br />
-					<input type="radio" value="monthlyButton" name="dateSorting" id="monthlyButton" /><label for="monthlyButton" id="monthlyLabel" >Monthly</label><br />
-					<input type="radio" value="yearlyButton" name="dateSorting" id="yearlyButton" /><label for="yearlyButton" id="yearlyLabel" >Yearly</label><br />
-					<input type="radio" value="allTimeButton" name="dateSorting" id="allTimeButton" /><label for="allTimeButton" id="allTimeLabel" >All Time</label><br />
+				<div class="buttons"> <!-- do checkboxes with option here -->
+					<button class="button" :class="[{active: index === activeTab}]" @click="onTabSelect(index,$event)" v-for="(menu,index) in menuItems" :key="index">{{menu.title}}</button>
+					<span class="buttons-strip"></span>
 				</div>
 			</header>
 			<div id="containerContentAndSideBar">
@@ -132,6 +124,7 @@
 				<p id="description">Description of Eyedea</p>
 			</div>
 		</footer>
-		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
+		<script src="tabs.js"></script>
 	</body>
 </html>
