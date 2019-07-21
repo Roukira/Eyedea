@@ -142,6 +142,7 @@ img:hover {
 #postIdeaLabel
 {
   color: white;
+  font: bold 12px;
   background-color: #33CAFF;
   border-top: 10px #33CAFF;
   border-bottom: 10px #33CAFF;
