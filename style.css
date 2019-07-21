@@ -53,7 +53,7 @@
   margin-top: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #containerFooter
@@ -65,16 +65,25 @@
 #content
 {
   margin-left: 2%;
-  width:80%
+  width: 1000px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
+  background-color: #f7f7f7;
 }
 
 aside
 {
-  width:18%
-  display: block;
+  width: 200px;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 50px;
+  margin-left: 50px;
+  background-color: white;
+  border-radius: 25px 25px 25px 25px;
 }
 
 section
@@ -90,7 +99,7 @@ section
 .theme {
   border: 0;
   line-height: 2.5;
-  padding: 0 20px;
+  margin-left: 200px;
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
@@ -143,10 +152,20 @@ img:hover {
   border-bottom: 10px #33CAFF;
   border-right: 10px #33CAFF;
   border-radius: 0px 40px 40px 0px;
-  height: 55px;
+  height: 50px;
+  width:150px;
   text-align: center;
   line-height: 300%;
   margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#postIdeaButton
+{
+	width: 50px;
+	height: 50px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 #searchBar
@@ -156,15 +175,9 @@ img:hover {
   border: 1px solid #2A2A2A;
   border-radius: 10px 10px 10px 10px;
   margin-right: 100px;
-  height: 30px;
+  height: 25px;
   margin-top: 15px;
-}
-
-#postIdeaButton
-{
-	width: 60px;
-	height: 55px;
-	margin-top: 5px;
+  margin-bottom: 20px;
 }
 
 #accountButton
@@ -185,18 +198,30 @@ img:hover {
 	border-radius: 40px 40px 40px 40px;
 	margin-right: 30px;
 	margin-top: 5px;
+	margin-bottom: 5px;
 	width: 50px;
 	height: 50px;
 }
+
+.sideMenuButtons
+{
+	width: 80px;
+	height: 80px;
+	margin-left: 60px;
+	margin-right: 60px;
+}
 .idea
 {
+  margin-left: 20px;
+  margin-right: 20px;
   padding-left: 10px;
   padding-right: 10px;
-  border: #404040 solid 2px;
-  border-radius: 12px 12px 12px 12px;
+  border: white solid 2px;
+  border-radius: 25px 25px 25px 25px;
   height: 200px;
   width: 100%; /*might be changed */
   margin-bottom: 20px;
+  background-color: white;
 }
 
 .containerIdea
@@ -210,7 +235,7 @@ img:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 100px;
+  width: 10%;
   height: 200px;
 }
 
@@ -218,7 +243,7 @@ img:hover {
 {
   display: flex;
   flex-direction: column;
-  height: 90px;
+  height: 200px;
 }
 
 .containerVoteIdea
@@ -258,6 +283,8 @@ body {
   background-color: #404040;
   padding:10px 20px;
   margin-top:60px;
+  padding-left: 10%;
+  padding-right: 10%;
   position: relative;
   height: 50px;
 }

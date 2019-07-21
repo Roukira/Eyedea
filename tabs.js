@@ -9,9 +9,6 @@ new Vue({
         title: "Latest"
       },
       {
-        title: "It's happening !"
-      },
-      {
         title: "Daily"
       },
       {
@@ -24,6 +21,9 @@ new Vue({
 	  ,
       {
         title: "All Time"
+      },
+      {
+        title: "It's happening !"
       }
     ]
   }),
@@ -76,7 +76,7 @@ new Vue({
         setTimeout(() => {
           strip.style.left = targetUtils.left + "px";
           strip.style.width = targetUtils.width + "px";
-        }, 300);
+        }, 100);
       } else if (direction === "left") {
         let hole;
         hole = stripLeft - targetUtils.left;
@@ -84,7 +84,7 @@ new Vue({
         strip.style.left = targetUtils.left + "px";
         setTimeout(() => {
           strip.style.width = targetUtils.width + "px";
-        }, 300);
+        }, 100);
       }
     },
   },
