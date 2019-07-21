@@ -1,7 +1,7 @@
 *
 {
   /*Dark theme*/
-  /*background-color: #121212;
+  /*background-color: #404040;
   color : white;*/
   /*Light Theme*/
   /*background-color: white;*/
@@ -16,8 +16,8 @@
   top: 0px;
   margin: 0px;
   padding: 0px;
-  background-color: #121212;
-  border-bottom: 10px black solid;
+  background-color: #404040;
+  border-bottom: 10px #404040 solid;
 }
 
 #containerFixedHeader
@@ -47,10 +47,10 @@
   width: 99.3%; /*should be 100% but there is a bug*/
   height: 30px;
   justify-content: space-around;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  border-top: 2px solid #404040;
+  border-bottom: 2px solid #404040;
+  border-left: 2px solid #404040;
+  border-right: 2px solid #404040;
   border-radius: 1px 1px 20px 20px;
 }
 
@@ -152,11 +152,22 @@ img:hover {
   vertical-align: middle;
 }
 
+#searchBar
+{
+  background-color: #434343;
+  color: white;
+}
+
+#accountButton #notificationButton
+{
+  background-color: #2A2A2A;
+}
+
 .idea
 {
   padding-left: 10px;
   padding-right: 10px;
-  border: black solid 2px;
+  border: #404040 solid 2px;
   border-radius: 12px 12px 12px 12px;
   height: 200px;
   width: 100%; /*might be changed */
