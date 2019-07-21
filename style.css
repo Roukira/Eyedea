@@ -17,6 +17,7 @@
   left: 0px;
   right: 0px;
   background-color: #404040;
+  z-index: 1; /*on top*/
 }
 
 #containerFixedHeader
