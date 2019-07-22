@@ -105,26 +105,31 @@
 				</div>
 				<aside>	<!-- Side Menu -->
 					<div id=containerSideMenu><br/>
-						<input type="image" src="GeneralLogo.png" name="generalButton" id="generalButton" class="sideMenuButtons" width=80px height=80px/><br />
+						<div class="categories"> <!-- do checkboxes with option here -->
+							<button class="category" :class="[{active: index === activeTab}]" @click="onTabSelect(index,$event)" v-for="(menu,index) in menuItems" :key="index">{{menu.title}}</button>
+							<span class="categories-strip"></span>
+						</div>
+						<!--<input type="image" src="GeneralLogo.png" name="generalButton" id="generalButton" class="sideMenuButtons" width=80px height=80px/><br />
 						<input type="image" src="HealthLogo.png" name="healthButton" id="healthButton" class="sideMenuButtons" width=80px height=80px/><br />
 						<input type="image" src="ScienceLogo.png" name="scienceButton" id="scienceButton" class="sideMenuButtons" width=80px height=80px/><br />
 						<input type="image" src="TechnologyLogo.png" name="technologyButton" id="technologyButton" class="sideMenuButtons" width=80px height=80px/><br />
 						<input type="image" src="ScenarioLogo.png" name="scenarioButton" id="scenarioButton" class="sideMenuButtons" width=80px height=80px/><br />
 						<input type="image" src="VideoGamesLogo.png" name="videoGamesButton" id="videoGamesButton" class="sideMenuButtons" width=80px height=80px/><br />
 						<input type="button" src="Start-Up" name="startUp" id="startUp" class="theme"/><br />
-						<input type="button" src="Category Settings Button" name="categorySettingsButton" id="categorySettingsButton" class="theme" /><br />
+						<input type="button" src="Category Settings Button" name="categorySettingsButton" id="categorySettingsButton" class="theme" /><br />-->
 					</div>
 				</aside>
 			</div>
 		</section>
 		
 		<footer> <!-- Footer containing general info -->
-			<div id="containerFooter">
+			<div id="containerFooter"> 
 				<img src="EyedeaSecondLogo.png" width="85" height="100" title="Logo" alt="logo">
 				<p id="description">Description of Eyedea</p>
 			</div>
 		</footer>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
 		<script src="tabs.js"></script>
+		<script src="categories.js"></script>
 	</body>
 </html>
