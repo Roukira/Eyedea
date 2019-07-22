@@ -106,8 +106,9 @@
 				<aside>	<!-- Side Menu -->
 					<div id=containerSideMenu><br/>
 						<div class="categories"> <!-- do checkboxes with option here -->
+						    <span class="categories-strip"></span>
 							<button class="category" :class="[{active: index === activeTab}]" @click="onTabSelect(index,$event)" v-for="(menu,index) in menuItems" :key="index">{{menu.title}}</button>
-							<span class="categories-strip"></span>
+							
 						</div>
 						<!--<input type="image" src="GeneralLogo.png" name="generalButton" id="generalButton" class="sideMenuButtons" width=80px height=80px/><br />
 						<input type="image" src="HealthLogo.png" name="healthButton" id="healthButton" class="sideMenuButtons" width=80px height=80px/><br />

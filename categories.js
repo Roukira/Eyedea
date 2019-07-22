@@ -31,8 +31,8 @@ new Vue({
       // set the initial stripe
       let strip = this.$el.querySelector(".categories-strip");
       let activeBtn = this.$el.querySelector('.category.active');
-      strip.style.left = this.actualPos(activeBtn, "left") + 'px'
-      strip.style.width = activeBtn.getBoundingClientRect().width.toFixed(2) + 'px'
+      strip.style.top = this.actualPos(activeBtn, "top") + 'px'
+      strip.style.height = activeBtn.getBoundingClientRect().height.toFixed(2) + 'px'
   
     },
   
@@ -52,31 +52,68 @@ new Vue({
         this.activeTab = index;
       },
       applyStrip(data){
-        let strip = this.$el.querySelector(".categories-strip");
+ /*       let strip = this.$el.querySelector(".categories-strip");
         let {
           e,
           oldIndex,
           newIndex
         } = data;
         let targetUtils = {
-            width: e.target.getBoundingClientRect().width,
-            left: this.actualPos(e.target, "left")
+            height: e.target.getBoundingClientRect().height,
+            top: this.actualPos(e.target, "top")
         };
-        let stripLeft = this.actualPos(e.target, "left")
+        let striptop = this.actualPos(e.target, "top")
 
         if (newIndex > oldIndex){
             setTimeout(() =>{
-                strip.style.height = targetUtils.height +"px";
+                strip.style.top = targetUtils.top +"px";
             }
             );
         }
         else if (oldIndex > newIndex){
             setTimeout(() =>{
-                strip.style.height = targetUtils.height +"px";
+                strip.style.top = targetUtils.top +"px";
             }
             );
         }
       },
     },
-  });
+  });*/
+      let direction = null;
+      let strip = this.$el.querySelector(".categories-strip");
+      let {
+        e,
+        oldIndex,
+        newIndex
+      } = data;
+      if (newIndex > oldIndex) direction = "bottom"
+      else if (oldIndex > newIndex) direction = "top"
+      let targetUtils = {
+        height: e.target.getBoundingClientRect().height,
+        top: this.actualPos(e.target, "top")
+      };
+      let striptop = this.actualPos(strip, "top")
+      if (direction === "bottom") {
+        strip.style.height =
+          strip.getBoundingClientRect().height +
+          (targetUtils.top +
+            targetUtils.height -
+            (striptop + strip.getBoundingClientRect().height)) +
+          "px";
+        setTimeout(() => {
+          strip.style.top = targetUtils.top + "px";
+          strip.style.height = targetUtils.height + "px";
+        }, 300);
+      } else if (direction === "top") {
+        let hole;
+        hole = striptop - targetUtils.top;
+        strip.style.height = strip.getBoundingClientRect().height + hole + "px";
+        strip.style.top = targetUtils.top + "px";
+        setTimeout(() => {
+          strip.style.height = targetUtils.height + "px";
+        }, 300);
+      }
+    },
+  },
+});
   
