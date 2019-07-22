@@ -76,7 +76,7 @@ new Vue({
         setTimeout(() => {
           strip.style.left = targetUtils.left + "px";
           strip.style.width = targetUtils.width + "px";
-        }, 100);
+        }, 300);
       } else if (direction === "left") {
         let hole;
         hole = stripLeft - targetUtils.left;
@@ -84,7 +84,7 @@ new Vue({
         strip.style.left = targetUtils.left + "px";
         setTimeout(() => {
           strip.style.width = targetUtils.width + "px";
-        }, 100);
+        }, 300);
       }
     },
   },
