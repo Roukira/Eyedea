@@ -366,3 +366,60 @@ body {
   border-bottom-right-radius: 5px;
   border-top-right-radius:5px;
 }
+
+.newIdeaButton {
+    position: relative;
+    margin-top: 5px;
+    right: 0%;
+    top: 0%;
+    z-index: 10;
+    background-color: #ffffff;
+    border-radius: 4em;
+    height: 4em;
+    width: 4em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.newIdeaButton {
+    border: 2px solid rgb(206, 206, 206);
+    background-color: #fff;
+    font-size: 20px;
+    height: 2.5em;
+    width: 2.5em;
+    border-radius: 100px;
+    transition: 0.5s ease-in-out;
+    position: relative;
+}
+
+.newIdeaButton:after {
+    content: "";
+    display: block;
+    background-color: grey;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -550%);
+    height: 0.3em;
+    width: 1.5em;
+    border-radius: 10px;
+}
+
+.newIdeaButton:before {
+    content: "";
+    display: block;
+    background-color: grey;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 1.5em;
+    width: 0.3em;
+    border-radius: 10px;
+}
+
+.newIdeaButton:hover {
+    cursor: pointer;
+    border-right-width: 200px;
+}
