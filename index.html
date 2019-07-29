@@ -14,7 +14,7 @@
 			<div id="containerFixedHeader">
 				<div id="containerLeftFixedHeader">
 					<a href="index.html"><img src="EyedeaSecondLogo.png" title="Logo" alt="logo" id="mainLogo"></a>
-					<div class="newIdeaButton"></div>
+					<div class="newIdeaButton" onmouseover="showText()" onmouseout="hideText()"><label id="newIdeaButtonLabel">Post...</label></div>
 				</div>
 				<div id="containerRightFixedHeader">
 					<input type="text" placeholder="Search..." id="searchBar" /><br />
@@ -132,5 +132,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.js"></script>
 		<script src="tabs.js"></script>
 		<script src="categories.js"></script>
+		<script src="postIdea.js"></script>
 	</body>
 </html>

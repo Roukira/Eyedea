@@ -398,3 +398,7 @@ body {
     cursor: pointer;
     border-right-width: 200px;
 }
+
+#newIdeaButtonLabel{
+    display:none;
+}
